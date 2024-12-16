@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestion des Utilisateurs, Catégories et Produits</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center my-4">Gestion des Utilisateurs, Catégories et Produits</h1>
+        
+        <!-- Navigation -->
+        <ul class="nav nav-tabs" id="myTab" role="tablist">
+            <li class="nav-item">
+                <a class="nav-link active" id="users-tab" data-toggle="tab" href="#users" role="tab" aria-controls="users" aria-selected="true">Utilisateurs</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="categories-tab" data-toggle="tab" href="#categories" role="tab" aria-controls="categories" aria-selected="false">Catégories</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" id="products-tab" data-toggle="tab" href="#products" role="tab" aria-controls="products" aria-selected="false">Produits</a>
+            </li>
+        </ul>
+
+        <div class="tab-content" id="myTabContent">
+            <!-- Utilisateurs -->
+            <div class="tab-pane fade show active" id="users" role="tabpanel" aria-labelledby="users-tab">
+                <h2 class="my-4">Gestion des Utilisateurs</h2>
+                <form id="add-user-form" class="mb-4">
+                    <div class="form-group">
+                        <label for="nom">Nom:</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prenom">Prénom:</label>
+                        <input type="text" class="form-control" id="prenom" name="prenom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Mot de passe:</label>
+                        <input type="password" class="form-control" id="password" name="password" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter Utilisateur</button>
+                </form>
+                <!-- List of users here -->
+            </div>
+
+            <!-- Catégories -->
+            <div class="tab-pane fade" id="categories" role="tabpanel" aria-labelledby="categories-tab">
+                <h2 class="my-4">Gestion des Catégories</h2>
+                <form id="add-category-form" class="mb-4">
+                    <div class="form-group">
+                        <label for="libelle">Libelle:</label>
+                        <input type="text" class="form-control" id="libelle" name="libelle" required>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter Catégorie</button>
+                </form>
+                <!-- List of categories here -->
+            </div>
+
+            <!-- Produits -->
+            <div class="tab-pane fade" id="products" role="tabpanel" aria-labelledby="products-tab">
+                <h2 class="my-4">Gestion des Produits</h2>
+                <form id="add-product-form" class="mb-4">
+                    <div class="form-group">
+                        <label for="nom">Nom:</label>
+                        <input type="text" class="form-control" id="nom" name="nom" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="description">Description:</label>
+                        <input type="text" class="form-control" id="description" name="description" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="prix">Prix:</label>
+                        <input type="number" class="form-control" id="prix" name="prix" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="quantite">Quantité:</label>
+                        <input type="number" class="form-control" id="quantite" name="quantite" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="id_categorie">Catégorie:</label>
+                        <select class="form-control" id="id_categorie" name="id_categorie">
+                            <!-- Dynamically load categories here -->
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Ajouter Produit</button>
+                </form>
+                <!-- List of products here -->
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
